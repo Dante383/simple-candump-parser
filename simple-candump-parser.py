@@ -48,12 +48,8 @@ def parseFile (file, jsonOutput):
 	try:
 		with open(file) as f:
 			lines = f.readlines()
-			i = 0
 			for line in lines:
-				i += 1
 				parseLine(line)
-				if (i > 1000):
-					break
 			formattedData = parseData(data)
 			
 			if (jsonOutput):
